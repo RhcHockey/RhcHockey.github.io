@@ -118,6 +118,32 @@
 		
 		hideExpiryEvents();
 		
+		$.ajax({
+			url:"https://www.kimonolabs.com/api/8493c9hs?apikey=p5Fj0OF0bmf2QKSgV51BjiTaYtUpKRgq",
+			crossDomain: true,
+			dataType: "jsonp",
+			success: function (response) {
+			//    console.log(response.results.fixtures[0]);
+			//     console.log(window.FixturesParser.convertedFixturesToDom(response.results.fixtures[0].fixture));
+				
+			var fixtures = window.FixturesParser.convertedFixturesToDom(response.results.fixtures[0].fixture);
+				
+				var $fixturesElm = $('<div></div>');
+				
+				$.each(fixtures, function(index, fixture){
+					$fixturesElm.append("<div><span class='label label-primary'>" + 
+						fixture.date +"</span> " + 
+						fixture.fixture  + 
+						"</div><hr />");
+				});
+				
+				$(".fixtures-list").append($fixturesElm);
+				$(".fixtures-loading").hide();
+			},
+			error: function (xhr, status) {
+				$(".fixtures-loading").text("Error loading fixtures");
+			}
+		});
 		
 })(jQuery);
 </script>
