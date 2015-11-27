@@ -510,3 +510,10 @@ a.anchor{
 .event-sidebar h4{
 	font-size: 1em;
 }
+
+.navbar-brand{
+	    background: url('../img/logo.jpg') no-repeat;
+    background-size: 55px;
+    background-position: 1px;
+    padding-left: 65px;
+}
