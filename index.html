@@ -14,10 +14,6 @@ permalink: /
         </div>
 
         <div class="col-lg-4">
-            <h4>Fixtures</h4>
-            <div class="hline"></div>
-            <br />
-            {% include fixtures.html %}
 
             <h4>Upcoming Events</h4>
             <div class="hline"></div>
@@ -34,6 +30,13 @@ permalink: /
                 {% endfor %}
                 
                 <p class="no-event-message" style="display: none">No upcoming events</p>
+                <div class="spacing"></div>
+                
+                <h4>Fixtures</h4>
+                <div class="hline"></div>
+                <br />
+                {% include fixtures.html %}
+
         </div>
     </div><! --/row -->
 </div><! --/container -->
