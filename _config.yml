@@ -4,8 +4,8 @@
 title: RHC Derby
 description: "This is the Ramgarhia hockey club website."
 analytics: 
-baseurl: "/RHC-Hockey" #important: start with /
-url: "http://kmlprtsng.github.io"
+baseurl: "" #important: start with /
+url: "http://Rhc-derby.co.uk"
 
 # Build settings
 markdown: kramdown
@@ -27,7 +27,7 @@ colors:  #in hex code if not noted else
 # Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
 social:
   - title: facebook
-    url:
+    url: https://www.facebook.com/rhcderby
     cssClass: facebook-official
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
