@@ -16,10 +16,9 @@ permalink: /
         <div class="col-lg-4">
             <h4>Fixtures</h4>
             <div class="hline"></div>
+            <br />
             {% include fixtures.html %}
 
-            <div class="spacing"></div>
-            
             <h4>Upcoming Events</h4>
             <div class="hline"></div>
                 {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}

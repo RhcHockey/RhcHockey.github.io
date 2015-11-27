@@ -128,13 +128,15 @@
 				
 			var fixtures = window.FixturesParser.convertedFixturesToDom(response.results.fixtures[0].fixture);
 				
-				var $fixturesElm = $('<div></div>');
+				var $fixturesElm = $('<table class="table table-striped table-condensed table-hover" />');
 				
-				$.each(fixtures, function(index, fixture){
-					$fixturesElm.append("<div><span class='label label-primary'>" + 
-						fixture.date +"</span> " + 
-						fixture.fixture  + 
-						"</div><hr />");
+				
+			$.each(fixtures, function(index, fixture){
+					$fixturesElm.append(
+						'<tr>' +
+							'<th>' + fixture.date + '</th>' +
+							'<td>' + fixture.fixture + '</td>' +
+						'</tr>');
 				});
 				
 				$(".fixtures-list").append($fixturesElm);
