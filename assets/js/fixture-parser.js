@@ -42,7 +42,12 @@
 		}
 		
 		if(currentColumn === 2){
-			fixtures[fixtures.length - 1].fixture = arr[j];
+			var matchStr = arr[j];
+			if(matchStr[matchStr.length-1] === "("){
+				matchStr = matchStr.slice(0, -1);
+			}
+			
+			fixtures[fixtures.length - 1].fixture = matchStr;
 		}
 		
 		if(currentColumn === 3)
