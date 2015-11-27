@@ -1,0 +1,34 @@
+---
+layout: simple
+title: Events
+permalink: /events/
+---
+
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+ 
+<div class="container mtb">
+    <div class="row">
+
+        <! -- Events LIST -->
+        <div class="col-lg-12">
+
+            
+            {% for event in site.categories['event'] %}
+               {% capture eventTime %}{{event.eventDate | date: '%s'}}{% endcapture %}
+               {% if eventTime > nowunix %}
+                <div class="event" data-eventDate='{{event.eventDate}}'>
+                    <a href="{{ event.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ event.title }}</h3></a>
+
+                    {{ event.content }}
+
+                    <div class="spacing"></div>
+    
+                    <div class="spacing"></div>
+                </div>
+                {% endif %}
+            {% endfor %}
+
+            <p class="no-event-message"  style="display: none">No upcoming events</p>
+        </div>
+    </div><!--/row -->
+</div><!--/container -->

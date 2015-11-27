@@ -1,0 +1,58 @@
+### GENERAL SETTINGS ###
+
+# Site settings
+title: RHC Derby
+description: "This is the Ramgarhia hockey club website."
+analytics: 
+baseurl: "/RHC-Hockey" #important: start with /
+url: "http://kmlprtsng.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title
+excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
+
+colors:  #in hex code if not noted else
+  primary: "#00b3fe" #"#F70031" 
+  primary_rgb: "0,179,254" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.  
+  secondary: "#384452" #"#33004D"
+  link: "#428bca"
+  link_hover: "#01b2fe"
+  footer_heading: "#ffffff"
+  footer_content: "#bfc9d3"
+  
+  
+### CONTACT SETTINGS ###
+
+# Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
+social:
+  - title: facebook
+    url:
+    cssClass: facebook-official
+    
+# Postal address (add as many lines as necessary). Shown in footer and on Contact page.
+address:
+  - lines: 
+    - Sinfin Community School
+    - Farmhouse Rd
+    - Derby
+    - DE24 3AR
+contact: Balraj Johal
+email: tbd@rhc.com
+tel: 01332 768758, 07753672537
+
+
+### GENERAL DATA FOR VARIOUS LOCATIONS ###
+    
+# Members information. Shown on About page.
+coaches:
+  - name: Raj Manku
+    position: 2nd Level coach
+    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    img: team01.jpg
+  - name: Oliver Coop
+    position: 1st Level Coach
+    text: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    img: team04.jpg
+
+homeWelcomeText: "Hello Guys, we need to fill this in with something useful. Let me know if you have any picutres that I can put in here"

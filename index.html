@@ -1,0 +1,40 @@
+---
+layout: index
+title: Home
+permalink: /
+---
+
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-8">
+            <h3 class="ctitle">Welcome to RHC Derby</h3>
+            
+            <p>{{ site.homeWelcomeText }}</p>
+            <img class="img-responsive" src="http://www.derbytelegraph.co.uk/images/localworld/ugc-images/276250/Article/images/20714561/5843951-large.jpg">
+        </div>
+
+        <div class="col-lg-4">
+            <h4>Fixtures</h4>
+            <div class="hline"></div>
+            <p>Coming soon....</p>
+
+            <div class="spacing"></div>
+            
+            <h4>Upcoming Events</h4>
+            <div class="hline"></div>
+                {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                
+                {% for event in site.categories['event'] %}
+
+                {% capture eventTime %}{{event.eventDate | date: '%s'}}{% endcapture %}
+                {% if eventTime > nowunix %}
+                <div class="event event-sidebar" data-eventDate='{{event.eventDate}}'>
+                    <a href="{{ event.url | prepend: site.baseurl }}"><h4>{{ event.title }}</h4></a>
+                </div>
+                {% endif %}
+                {% endfor %}
+                
+                <p class="no-event-message" style="display: none">No upcoming events</p>
+        </div>
+    </div><! --/row -->
+</div><! --/container -->

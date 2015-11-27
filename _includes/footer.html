@@ -1,0 +1,30 @@
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-4">
+                <h4>Our Training Ground</h4>
+                <div class="hline-w"></div>
+                <p>
+                    {% for line in site.address.first.lines %}
+                        {{ line }} <br>
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Training Time</h4>
+                <div class="hline-w"></div>
+                <p>Juniors: Wednesday: 6pm - 7pm</p>
+  				<p>Seniors: 6:30pm - 8:30pm</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    {% for network in site.social %}
+                        <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-{{ network.cssClass }}"></i></a>
+                    {% endfor %}
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->

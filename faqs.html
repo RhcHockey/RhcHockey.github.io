@@ -1,0 +1,22 @@
+---
+layout: simple
+title: FAQs
+permalink: /faqs/
+---
+
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-12">
+
+            {% for question in site.categories['question'] %}
+                <h3 class="ctitle">{{ question.title }}</h3>
+
+                    {{ question.content }}
+
+                <div class="spacing"></div>
+                <div class="spacing"></div>
+            {% endfor %}
+
+        </div><! --/col-lg-8 -->
+    </div><! --/row -->
+</div><! --/container -->

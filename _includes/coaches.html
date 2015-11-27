@@ -1,0 +1,18 @@
+<div class="container mtb">
+    <div class="row centered">
+        <h3 class="mb">Coaches</h3>
+        
+        {% for coach in site.coaches %}
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="he-wrap tpl6">
+            <img src="{{ "/assets/img/coaches/" | prepend: site.baseurl }}{{ coach.img }}" alt="">	
+            </div><!-- he wrap -->
+            <h4>{{ coach.name }}</h4>
+            <h5 class="ctitle">{{ coach.position }}</h5>
+            <p>{{ coach.text }}</p>
+            <div class="hline"></div>
+        </div><! --/col-lg-3 -->	 	
+        {% endfor %}
+        
+    </div><! --/row -->
+</div><! --/container -->
