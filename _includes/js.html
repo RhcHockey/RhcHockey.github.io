@@ -121,30 +121,26 @@
 		$.ajax({
 			url:"https://www.kimonolabs.com/api/8493c9hs?apikey=p5Fj0OF0bmf2QKSgV51BjiTaYtUpKRgq",
 			crossDomain: true,
-			dataType: "jsonp",
-			success: function (response) {
-			//    console.log(response.results.fixtures[0]);
-			//     console.log(window.FixturesParser.convertedFixturesToDom(response.results.fixtures[0].fixture));
+			dataType: "jsonp"
+		})
+		.done(function (response) {
+			var fixtures = 
+				window.FixturesParser.convertedFixturesToDom(response.results.fixtures[0].fixture);
 				
-			var fixtures = window.FixturesParser.convertedFixturesToDom(response.results.fixtures[0].fixture);
-				
-				var $fixturesElm = $('<table class="table table-striped table-condensed table-hover" />');
-				
-				
+			var $fixturesElm = $('<table class="table table-striped table-condensed table-hover" />');
 			$.each(fixtures, function(index, fixture){
-					$fixturesElm.append(
-						'<tr>' +
-							'<th>' + fixture.date + '</th>' +
-							'<td>' + fixture.fixture + '</td>' +
-						'</tr>');
-				});
+				$fixturesElm.append(
+					'<tr>' +
+						'<th>' + fixture.date + '</th>' +
+						'<td>' + fixture.fixture + '</td>' +
+					'</tr>');
+			});
 				
 				$(".fixtures-list").append($fixturesElm);
 				$(".fixtures-loading").hide();
-			},
-			error: function (xhr, status) {
-				$(".fixtures-loading").text("Error loading fixtures");
-			}
+		})
+		.fail(function(){
+			$(".fixtures-loading").text("Error loading fixtures");
 		});
 		
 })(jQuery);
