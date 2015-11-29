@@ -11,7 +11,10 @@ permalink: /events/
 
         <! -- Events LIST -->
         <div class="col-lg-12">
-
+            <p>
+                We aim to provide our juniors with as much playing time as possible to help them improve 
+                and fulfil their potential. With this in mind, the junior team attend monthly tournaments 
+                in different locations around the East Midlands playing in a 7-a-side format.</p>
             
             {% for event in site.categories['event'] %}
                {% capture eventTime %}{{event.eventDate | date: '%s'}}{% endcapture %}
