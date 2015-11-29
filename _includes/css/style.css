@@ -525,3 +525,18 @@ a.anchor{
     padding-left: 65px;
 	margin-left: 10px;
 }
+
+
+@media screen and (max-width: 600px){
+	.homepage-training.media > .pull-left{
+		float: none !important;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 601px){
+	.homepage-training.media > .pull-left{
+		width: 40%;
+	}
+}
